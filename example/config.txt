@@ -1,0 +1,2 @@
+Prefix plugins/SingleCellHeatmap/example/
+Plugin SingleCellHeatmap inputfile parameters.singlecellheatmap.txt outputfile scheatmap.pdf
