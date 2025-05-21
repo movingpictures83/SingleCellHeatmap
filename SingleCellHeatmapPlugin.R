@@ -28,6 +28,9 @@ pbmc.markers %>%
     dplyr::filter(avg_logFC > 1) %>%
     slice_head(n = topN) %>%
     ungroup() -> top10
+
+#print(str(pbmc))
+write.csv(pbmc@commands$RunPCA.RNA@params$features, paste(outputfile, "csv", sep="."))
 DoHeatmap(pbmc, features = top10$gene) + NoLegend()
 }
 
